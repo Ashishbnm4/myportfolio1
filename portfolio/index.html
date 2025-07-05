@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Ashish Mishra</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1><span id="intro-text"></span><span class="cursor">|</span></h1>
+      <h1></h1>
+      <p>
+        A passionate AI Engineer and full-stack developer with a love for turning ideas into intelligent digital
+        products. I build smart systems like voice assistants, face recognition tools, and AI-powered web apps using
+        technologies like Python, OpenCV, JavaScript, and OpenAI.
+        <br><br>
+
+      </p>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <div class="resume">
+    <a href="resume.pdf" download class="btn resume-btn" download>Download Resume</a>
+
+  </div>
+
+  <section class="about" id="about" data-aos="fade-right">
+    <h2>About Me</h2>
+    <p>I’m an enthusiastic developer with a strong interest in AI, frontend design, and smart assistant systems. I enjoy
+      building responsive websites and smart applications.</p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+      <span>HTML</span>
+      <div class="progress-bar">
+        <div class="progress-fill html"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <span>CSS</span>
+      <div class="progress-bar">
+        <div class="progress-fill css"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="progress-bar">
+        <div class="progress-fill js"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <span>Python</span>
+      <div class="progress-bar">
+        <div class="progress-fill python"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Artificial Intelligence</span>
+      <div class="progress-bar">
+        <div class="progress-fill html"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Machine Learning</span>
+      <div class="progress-bar">
+        <div class="progress-fill html"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects" data-aos="zoom-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="dreamstime_m_137534981-1024x661.jpg" alt="Face Recognition System">
+      <h3>Face Recognition System</h3>
+      <p>This project uses computer vision and machine learning to detect and recognize human faces using OpenCV and
+        Python. It's ideal for attendance, access control, and surveillance systems.</p>
+      <div class="project-links">
+        <a href="https://github.com/yourusername/face-recognition-system" target="_blank" class="btn">Source Code</a>
+        <a href="https://your-live-demo-link.com" target="_blank" class="btn">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="project">
+        <img src="shutterstock_753054454.jpg" alt="Project 1" />
+        <h3>Smart Voice Assistant</h3>
+        <p>Voice-controlled assistant with ChatGPT integration, weather, reminders, and more.</p>
+      </div>
+      <div class="project">
+        <img src="Generative.png" alt="Project 2" />
+        <h3>AI Portfolio Generator</h3>
+        <p>A tool that helps users create portfolios using AI prompts and templates.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/ashishbnm4@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </section>
+
+  <footer>
+    <div class="social-icons" style="margin: 20px 0;">
+      <a href="https://github.com/yourgithub" target="_blank" style="margin: 0 10px; color: #fff; font-size: 20px;">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/https://www.linkedin.com/in/ashish-mishra-7891382b5p" target="_blank"
+        style="margin: 0 10px; color: #fff; font-size: 20px;">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/yourtwitter" target="_blank" style="margin: 0 10px; color: #fff; font-size: 20px;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/__ashishmishra_" target="_blank">
+  <i class="fab fa-instagram"></i>
+</a>
+
+    </div>
+    <p>© 2025 Ashish | All Rights Reserved</p>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script>
+    const textElement = document.getElementById("intro-text");
+    const text = "Hello, I'm Ashish, a passionate AI Engineer and Full Stack Developer.";
+    const words = text.split(" ");
+    let index = 0;
+
+    function showNextWord() {
+      if (index < words.length) {
+        textElement.innerHTML += words[index] + " ";
+        index++;
+        setTimeout(showNextWord, 300); // speed of typing (in ms)
+      }
+    }
+
+    showNextWord();
+  </script>
+  <canvas id="matrix-bg"></canvas>
+  <script>
+    const canvas = document.getElementById("matrix-bg");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "01";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#0f0"; // Matrix green
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(drawMatrix, 50);
+  </script>
+
+</body>
+
+</html>
